@@ -1,0 +1,16 @@
+.bodyinput {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-basis: 80vh;
+  overflow-y: auto;
+}
+header {
+  flex-basis: 10vh;
+}
+
+footer {
+  flex-basis: 10vh;
+}
