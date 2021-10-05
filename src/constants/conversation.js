@@ -1,4 +1,4 @@
-const host = 'https://morning-escarpment-37129.herokuapp.com/'
+const host = 'https://safe-lake-14293.herokuapp.com/'
 
 
 module.exports={
