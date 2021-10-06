@@ -34,7 +34,7 @@ export default function SignIn() {
             to={`/chat?name=${name}&room=${room}`}
           >
             <Button className="btn btn-success mt-3" type="submit">
-              Connect Room <i className="fa fa-sign-in" aria-hidden="true"></i>
+              Connect Room <i className="fa fa-sign-in" ></i>
             </Button>
           </Link>
         </Col>
