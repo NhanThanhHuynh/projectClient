@@ -82,12 +82,12 @@ export default function LoginForm ()  {
               </Form.Group>
               <Col className="bg-primary d-flex justify-content-center mt-3 rounded-3">
                 {" "}
-                <Button variant="primary" type="submit">
+                <Button variant="primary w-100" type="submit">
                   <i className="fa fa-sign-in"> Login</i>
                 </Button>
               </Col>
               <Col className="mt-3 bg-success d-flex justify-content-center rounded-3">
-                <Link to="/register" className="btn btn-success">
+                <Link to="/register" className="btn btn-success w-100">
                   <i className="fa fa-user-plus"> Register</i>
                 </Link>
               </Col>

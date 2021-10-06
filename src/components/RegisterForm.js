@@ -92,12 +92,12 @@ export default function RegisterForm() {
 
             <Col className="bg-primary d-flex justify-content-center mt-3 rounded-3">
               {" "}
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" className='w-100'>
                 <i className="fa fa-user-plus" >Register</i>
               </Button>
             </Col>
             <Col className="mt-3 bg-success d-flex justify-content-center rounded-3">
-              <Link to="/login" className="btn btn-success">
+              <Link to="/login" className="btn btn-success w-100">
                 Already have account ? Login <i className="fa fa-universal-access" ></i>
               </Link>
             </Col>
