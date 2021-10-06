@@ -16,7 +16,7 @@ export default function SignIn() {
           <div>
             <input
               placeholder="Nickname"
-              className="btn btn-outline-primary"
+              className="border border-3 border-primary rounded-3"
               type="text"
               onChange={(event) => setName(event.target.value)}
             />
@@ -24,7 +24,7 @@ export default function SignIn() {
           <div>
             <input
               placeholder="Room"
-              className="mt-3 btn btn-outline-primary "
+              className="mt-3 border border-3 border-primary rounded-3"
               type="text"
               onChange={(event) => setRoom(event.target.value)}
             />
@@ -33,7 +33,7 @@ export default function SignIn() {
             onClick={(e) => (!name || !room ? e.preventDefault() : null)}
             to={`/chat?name=${name}&room=${room}`}
           >
-            <Button className="btn btn-success mt-3" type="submit">
+            <Button className="btn-success mt-3" type="submit">
               Connect Room <i className="fa fa-sign-in" ></i>
             </Button>
           </Link>
