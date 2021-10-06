@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { Button } from "react-bootstrap";
+import '../css/InputCss.css'
 
 const Input = ({ setMessage, sendMessage, message }) => {
   //debounce OnChange
@@ -21,15 +23,32 @@ const Input = ({ setMessage, sendMessage, message }) => {
     } else return null;
   };
 
+  const HandleOnclick = (event) => {
+    event.preventDefault();
+    sendMessage(event);
+    if (sendMessage) {
+      setString("");
+    }
+  };
   return (
-    <input
-      className="border border-dark bg-info flex-fill "
-      type="text"
-      placeholder="Type a message..."
-      value={string}
-      onChange={handleChange}
-      onKeyPress={(event) => onKeyPressHandle(event)}
-    />
+    <div className="d-flex flex-row w-100 ">
+      <input
+        className="border border-dark bg-info w-100"
+        type="text"
+        placeholder="Type a message..."
+        value={string}
+        onChange={handleChange}
+        onKeyPress={(event) => onKeyPressHandle(event)}
+      />
+
+      <Button
+        onClick={(event) => HandleOnclick(event)}
+        className="btn btn-primary rounded-0 SendMessageButton d-xl-none d-lg-none d-xl-block"
+      >
+        <i className="fa fa-paper-plane">
+        </i>
+      </Button>
+    </div>
   );
 };
 
