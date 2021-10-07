@@ -19,7 +19,6 @@ const Currency = () => {
       })
       .catch((error) => alert('Interval server error'));
   }, []);
-
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
