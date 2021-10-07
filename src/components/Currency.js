@@ -16,9 +16,8 @@ const Currency = () => {
       .get(top100coin_api)
       .then((res) => {
         setCoins(res.data);
-        console.log(res.data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => alert('Interval server error'));
   }, []);
 
   const handleChange = (e) => {
