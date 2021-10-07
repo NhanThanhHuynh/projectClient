@@ -31,7 +31,7 @@ const Chat = ({ location }) => {
     socket.emit("join", { name, room }, () => {});
     //log out chat [unmount handle]
     return () => {
-      socket.emit("disconnect");
+      socket.emit("disconect");
       socket.off();
     };
   }, [conversation.host, location.search]);

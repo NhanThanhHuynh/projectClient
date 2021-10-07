@@ -1,0 +1,15 @@
+.coin-symbol {
+  text-transform: uppercase;
+}
+
+.red {
+  color: #f00606;
+}
+
+.green {
+  color: #11d811;
+}
+.imgfixed {
+  width: 30px;
+  
+}

@@ -37,6 +37,12 @@ export default function SignIn() {
               Connect Room <i className="fa fa-sign-in" ></i>
             </Button>
           </Link>
+         <p className='mt-3'>
+          <Link to ='/mainredirect'> 
+          BACK TO HOME PAGE
+          </Link>
+          </p>
+          
         </Col>
         <Col xl={3} sm={3} md={3}></Col>
       </Row>

@@ -7,6 +7,8 @@ import RegisterForm from './components/RegisterForm'
 import ProtectedRoute from "./components/ProtectedRoute";
 import Join from './components/Join'
 import Chat from "./components/Chat";
+import MainRedirect from './components/MainRedirect'
+import Currency from "./components/Currency";
 
 function App(){
   return (
@@ -16,6 +18,8 @@ function App(){
           <Route exact path="/" component={LoginRedirect} />
           <Route exact path="/login" component={LoginForm} />
           <Route exact path ='/register' component ={RegisterForm}/>
+          <ProtectedRoute exact path='/mainredirect' component ={MainRedirect}/>
+          <ProtectedRoute exact path='/currency' component = {Currency} />
           <ProtectedRoute exact path ='/dashboard' component={Join} />
           <ProtectedRoute path ='/chat' component={Chat} />
         </Switch>

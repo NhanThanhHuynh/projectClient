@@ -30,7 +30,7 @@ export default function LoginForm ()  {
     try {
       const Logindata = await LoginUser(loginForm)
       if(Logindata.success){
-        history.push(('/dashboard'))
+        history.push(('/mainredirect'))
       }else {
         alert(Logindata.message)
       }
