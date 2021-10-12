@@ -49,6 +49,7 @@ const AddpostModal = () => {
     });
 
   return (
+    <>
     <Modal show={showAddPostModal} animation={false} onHide={closeDialog}>
       <Modal.Header closeButton>
         <Modal.Title>What do you want to learn ?</Modal.Title>
@@ -102,6 +103,7 @@ const AddpostModal = () => {
         </Modal.Footer>
       </Form>
     </Modal>
+    </>
   );
 };
 

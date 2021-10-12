@@ -50,9 +50,7 @@ const PostcontextProvider = ({ children }) => {
         return response.data;
       }
     } catch (error) {
-      return error.response.data
-        ? error.reponse.data
-        : { success: false, message: "Server error" };
+      alert(error)
     }
   };
   //Delete Post

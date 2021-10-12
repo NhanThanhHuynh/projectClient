@@ -12,6 +12,7 @@ import Currency from "./components/Currency/Currency";
 import dashboard from './views/Dashboard'
 import PostcontextProvider from './contexts/Post'
 
+
 function App(){
   return (
     <LoginProvider>
