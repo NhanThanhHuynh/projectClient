@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../css/MessageCss.css";
+import "../../css/MessageCss.css";
 
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;

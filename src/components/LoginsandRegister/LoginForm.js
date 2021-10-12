@@ -1,8 +1,8 @@
 import React, { useState,useContext } from "react";
 import { Form, Col, Row, Container, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../css/LoginFormCss.css";
-import {LoginContext} from '../contexts/Auth'
+import "../../css/LoginFormCss.css";
+import {LoginContext} from '../../contexts/Auth'
 import {useHistory} from 'react-router-dom'
 
 export default function LoginForm ()  {

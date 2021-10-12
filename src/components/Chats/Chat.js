@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
-import * as conversation from "../constants/conversation";
+import * as conversation from '../../constants/conversation';
 import { Form } from "react-bootstrap";
 import InfoBar from "./InfoBar";
-import "../css/ChatCss.css";
+import "../../css/ChatCss.css";
 import Messages from "./Messages";
 import Input from "./Input";
 let socket;

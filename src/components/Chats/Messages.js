@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { Col } from "react-bootstrap";
-import "../css/MessagesCss.css";
+import "../../css/MessagesCss.css";
 import Message from "./Message";
 
 const Messages = ({ messages, name ,count}) => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import '../css/JoinCss.css'
+import '../../css/JoinCss.css'
 
 export default function SignIn() {
   const [name, setName] = useState("");

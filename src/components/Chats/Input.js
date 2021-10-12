@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Button } from "react-bootstrap";
-import '../css/InputCss.css'
+import '../../css/InputCss.css'
 
 const Input = ({ setMessage, sendMessage, message }) => {
   //debounce OnChange

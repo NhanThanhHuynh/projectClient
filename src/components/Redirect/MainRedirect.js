@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import "../css/MainRedirectCss.css";
+import "../../css/MainRedirectCss.css";
 
 const MainRedirect = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { top100coin_api } from "../constants/Currency";
-import "../css/CurrencyCss.css";
+import { top100coin_api } from "../../constants/Currency";
+import "../../css/CurrencyCss.css";
 import Coin from "./Coin";
 import { Table, Container, Row, Col,Button } from "react-bootstrap";
 import {Link} from 'react-router-dom'
@@ -10,8 +10,9 @@ const Currency = () => {
   //lam them 2 cai nut back ve
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
-
+ 
   useEffect(() => {
+    console.log('count time')
     axios
       .get(top100coin_api)
       .then((res) => {
@@ -19,6 +20,7 @@ const Currency = () => {
       })
       .catch((error) => alert('Interval server error'));
   }, []);
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   };

@@ -1,9 +1,9 @@
 import { Spinner } from "react-bootstrap";
 import { useContext, useEffect } from "react";
-import { LoginContext } from "../contexts/Auth";
+import { LoginContext } from "../../contexts/Auth";
 import React from "react";
 import { Redirect, Route } from "react-router-dom";
-import "../css/ProtectedCss.css";
+import "../../css/ProtectedCss.css";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const {

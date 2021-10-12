@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../css/InfoBarCss.css'
+import '../../css/InfoBarCss.css'
 
 const InfoBar = ({ room }) => (
   <div className="d-flex flex-row w-100">
