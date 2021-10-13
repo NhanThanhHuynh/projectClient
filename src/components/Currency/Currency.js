@@ -3,7 +3,7 @@ import axios from "axios";
 import { top100coin_api } from "../../constants/Currency";
 import "../../css/CurrencyCss.css";
 import Coin from "./Coin";
-import { Table, Container, Row, Col,Button } from "react-bootstrap";
+import { Table, Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
 const Currency = () => {
@@ -45,7 +45,7 @@ const Currency = () => {
                 />
               </form>
               <div className='mt-3 BackPage'>
-                 <Link to ='/mainredirect'>
+                 <Link to ='/learning'>
                  BACK TO HOME PAGE
                  </Link>
               </div>

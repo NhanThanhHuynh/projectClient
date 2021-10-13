@@ -7,6 +7,15 @@ const AddpostModal = () => {
   //Context
   const { SetshowAddPostModal, showAddPostModal, addPost, SetshowToast } =
     useContext(PostContext);
+    //State
+  const [newPost, setnewPost] = useState({
+    title: "",
+    description: "",
+    url: "",
+    status: "TO LEARN",
+  });
+  const { title, description, url } = newPost;
+  
   const closeDialog = () => {
     setnewPost({
       title: "",
@@ -33,14 +42,7 @@ const AddpostModal = () => {
     });
     SetshowAddPostModal(false);
   };
-  //State
-  const [newPost, setnewPost] = useState({
-    title: "",
-    description: "",
-    url: "",
-    status: "TO LEARN",
-  });
-  const { title, description, url } = newPost;
+  
 
   const onChangeNewPostForm = (e) =>
     setnewPost({
@@ -50,7 +52,7 @@ const AddpostModal = () => {
 
   return (
     <>
-    <Modal show={showAddPostModal} animation={false} onHide={closeDialog}>
+    <Modal show={showAddPostModal} onHide={closeDialog}>
       <Modal.Header closeButton>
         <Modal.Title>What do you want to learn ?</Modal.Title>
       </Modal.Header>
@@ -67,7 +69,7 @@ const AddpostModal = () => {
               onChange={onChangeNewPostForm}
             />
             <Form.Text id="title-help" muted>
-              Required
+              Required title
             </Form.Text>
           </Form.Group>
           <Form.Group>
@@ -80,13 +82,14 @@ const AddpostModal = () => {
               onChange={onChangeNewPostForm}
             />
           </Form.Group>
-          <Form.Group>
+          <Form.Group className='mt-2'>
             <Form.Control
               type="text"
               placeholder="Youtube Tutorial URL"
               name="url"
               value={url}
               onChange={onChangeNewPostForm}
+              
             />
           </Form.Group>
         </Modal.Body>

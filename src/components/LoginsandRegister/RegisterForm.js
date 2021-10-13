@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Form, Col, Row, Container, Button, Image } from "react-bootstrap";
+import { Form, Col, Row, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../../css/LoginFormCss.css";
 import { LoginContext } from "../../contexts/Auth";
@@ -28,13 +28,13 @@ export default function RegisterForm() {
   //Submit
   const RegisterSubmit = async (event) => {
     event.preventDefault();
-    if (password != confirmpassword) {
+    if (password !== confirmpassword) {
       alert("Password does not match");
       return;
     }
     try {
       const Registerdata = await Register(registerForm);
-      console.log(Registerdata)
+
       if (Registerdata.success) {
         alert("Register successfully");
         history.push("/login");

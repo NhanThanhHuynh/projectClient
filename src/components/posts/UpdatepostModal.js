@@ -43,8 +43,12 @@ const UpdatepostModal = () => {
 
   return (
     <Modal show={showUpdatePostModal} onHide={closeDialog}>
-      <Modal.Header closeButton>
+      <Modal.Header >
         <Modal.Title>Making Progress ?</Modal.Title>
+        <Button className='btn btn-light'
+        onClick={closeDialog}
+        >
+          <i className="fa fa-window-close"></i></Button>
       </Modal.Header>
       <Form onSubmit={onSubmit}>
         <Modal.Body>
@@ -59,7 +63,7 @@ const UpdatepostModal = () => {
               onChange={onChangeNewPostForm}
             />
             <Form.Text id="title-help" muted>
-              Required
+             Required title
             </Form.Text>
           </Form.Group>
           <Form.Group>
@@ -72,7 +76,7 @@ const UpdatepostModal = () => {
               onChange={onChangeNewPostForm}
             />
           </Form.Group>
-          <Form.Group>
+          <Form.Group className='mt-2'>
             <Form.Control
               type="text"
               placeholder="Youtube Tutorial URL"
@@ -81,7 +85,7 @@ const UpdatepostModal = () => {
               onChange={onChangeNewPostForm}
             />
           </Form.Group>
-          <Form.Group>
+          <Form.Group className='mt-2'>
             <Form.Control
               as="select"
               name="status"

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/CoinCss.css";
-import { Table } from "react-bootstrap";
+
 
 const Coin = ({
   name,

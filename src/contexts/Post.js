@@ -45,9 +45,11 @@ const PostcontextProvider = ({ children }) => {
   const addPost = async (newPost) => {
     try {
       const response = await axios.post(`${api_URL}/posts`, newPost);
+
       if (response.data.success) {
-        dispatch({ type: ADD_POST, payload: response.data.post });
-        return response.data;
+        dispatch({ type: ADD_POST, payload: response.data.Newpost })
+        return response.data
+        
       }
     } catch (error) {
       alert(error)

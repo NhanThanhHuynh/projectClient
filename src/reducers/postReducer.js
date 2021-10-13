@@ -21,7 +21,6 @@ export const PostsReducer = (state, action) => {
           posts:[...state.posts,payload]
         }
         case DELETE_POST:
-          console.log(state)
         return {
           ...state,
           posts:state.posts.filter(x=>x._id !== payload)

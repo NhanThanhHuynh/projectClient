@@ -80,8 +80,16 @@ export default function LoginProvider({ children }) {
       console.log(error);
     }
   };
+  //Log out
+  const logoutUser = ()=>{
+    localStorage.removeItem(LOCAL_STORAGE_TOKEN)
+    dispatch({
+      type: "SET_AUTH",
+      payload: { isAuthticated: false, user: null },
+    });
+  }
   //Context data
-  const LoginData = { LoginUser, authState,Register };
+  const LoginData = { LoginUser, authState,Register,logoutUser };
   //Provider
   return (
     <LoginContext.Provider value={LoginData}>{children}</LoginContext.Provider>

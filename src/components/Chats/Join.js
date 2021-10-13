@@ -38,7 +38,7 @@ export default function SignIn() {
             </Button>
           </Link>
          <p className='mt-3'>
-          <Link to ='/mainredirect'> 
+          <Link to ='/learning'> 
           BACK TO HOME PAGE
           </Link>
           </p>

@@ -1,5 +1,5 @@
 import React, { useState,useContext } from "react";
-import { Form, Col, Row, Container, Button, Image } from "react-bootstrap";
+import { Form, Col, Row, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../../css/LoginFormCss.css";
 import {LoginContext} from '../../contexts/Auth'
@@ -30,7 +30,7 @@ export default function LoginForm ()  {
     try {
       const Logindata = await LoginUser(loginForm)
       if(Logindata.success){
-        history.push(('/mainredirect'))
+        history.push(('/learning'))
       }else {
         alert(Logindata.message)
       }
