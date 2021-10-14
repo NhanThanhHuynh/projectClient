@@ -11,13 +11,22 @@ const Currency = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
  
-  useEffect(() => {
-    axios
-      .get(top100coin_api)
-      .then((res) => {
-        setCoins(res.data);
-      })
-      .catch((error) => alert('Interval server error',error));
+  useEffect( () => {
+    async function FetechDta(){
+      const response = await axios.get(top100coin_api)
+    
+    try {
+      if(response.data){
+        setCoins(response.data)
+      }
+      else {
+        alert('failed to get data')
+      }
+    } catch (error) {
+      console.log('Interval server error',error)
+    }
+    }
+    FetechDta()
   }, []);
 
   const handleChange = (e) => {
