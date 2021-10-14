@@ -12,13 +12,12 @@ const Currency = () => {
   const [search, setSearch] = useState("");
  
   useEffect(() => {
-    console.log('count time')
     axios
       .get(top100coin_api)
       .then((res) => {
         setCoins(res.data);
       })
-      .catch((error) => alert('Interval server error'));
+      .catch((error) => alert('Interval server error',error));
   }, []);
 
   const handleChange = (e) => {
@@ -61,7 +60,7 @@ const Currency = () => {
                 <th>SYMBOL</th>
                 <th>PRICE</th>
                 <th>VOLUME</th>
-                <th>PRICE CHANGE</th>
+                <th className='text-nowrap'>PRICE CHANGE</th>
                 <th> MKT CAP</th>
               </tr>
             </thead>

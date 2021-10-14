@@ -36,7 +36,7 @@ const Aboutme = () => {
                 impossible.
               </p>
               <p>
-                From engine to present era. From whitelight to everything, do
+                From engine to present era and from whitelight to everything, do
                 not lose your original mind.
               </p>
             </Col>

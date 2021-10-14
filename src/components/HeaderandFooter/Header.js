@@ -1,9 +1,9 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { LoginContext } from "../../contexts/Auth";
 import { useContext } from "react";
+import "../../css/HeaderCss.css";
 
 const Headers = () => {
   const {
@@ -17,16 +17,19 @@ const Headers = () => {
       <Navbar expand="lg" bg="primary" variant="dark" className="shadow">
         <Navbar.Brand className="font-weight-bolder text-white">
           <Nav.Link
-            className="font-weight-bolder text-white "
+            className="font-weight-bolder text-white mx-2 p-0 "
             to="/learning"
             as={Link}
           >
             Welcome <strong className="text-black">{username}</strong>
           </Nav.Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto d-flex mx-2">
+        <Navbar.Toggle aria-controls="basic-navbar-nav " className='mx-2' />
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+         
+        >
+          <Nav className="d-flex mx-2">
             <Nav.Link
               className="font-weight-bolder text-white "
               to="/dashboard"
@@ -50,14 +53,14 @@ const Headers = () => {
             >
               ABOUT ME <i className="fa fa-child"></i>
             </Nav.Link>
-          </Nav>
-          <Nav className="d-flex">
-            <Button
-              className="font-weight-bolder text-white btn"
-              onClick={logoutUser}
-            >
-              LOG OUT <i className="fa fa-sign-out"></i>
-            </Button>
+            <Nav.Link>
+              <span
+                className="font-weight-bolder text-white cursor"
+                onClick={logoutUser}
+              >
+                LOG OUT <i className="fa fa-sign-out"></i>
+              </span>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
