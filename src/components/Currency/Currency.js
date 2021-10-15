@@ -4,29 +4,28 @@ import { top100coin_api } from "../../constants/Currency";
 import "../../css/CurrencyCss.css";
 import Coin from "./Coin";
 import { Table, Container, Row, Col } from "react-bootstrap";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Currency = () => {
   //lam them 2 cai nut back ve
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
- 
-  useEffect( () => {
-    async function FetechDta(){
-      const response = await axios.get(top100coin_api)
-    
-    try {
-      if(response.data){
-        setCoins(response.data)
+
+  useEffect(() => {
+    async function FetechDta() {
+      const response = await axios.get(top100coin_api);
+
+      try {
+        if (response.data) {
+          setCoins(response.data);
+        } else {
+          alert("failed to get data");
+        }
+      } catch (error) {
+        console.log("Interval server error", error);
       }
-      else {
-        alert('failed to get data')
-      }
-    } catch (error) {
-      console.log('Interval server error',error)
     }
-    }
-    FetechDta()
+    FetechDta();
   }, []);
 
   const handleChange = (e) => {
@@ -52,10 +51,8 @@ const Currency = () => {
                   placeholder="Search"
                 />
               </form>
-              <div className='mt-3 BackPage'>
-                 <Link to ='/learning'>
-                 BACK TO HOME PAGE
-                 </Link>
+              <div className="mt-3 BackPage">
+                <Link to="/learning">BACK TO HOME PAGE</Link>
               </div>
             </div>
           </div>
@@ -63,30 +60,28 @@ const Currency = () => {
         <Col xl="12" sm="12" md="12">
           <Table responsive="sm">
             <thead>
-              <tr className='text-dark'>
+              <tr className="text-dark">
                 <th>COIN</th>
                 <th>NAME</th>
                 <th>SYMBOL</th>
                 <th>PRICE</th>
                 <th>VOLUME</th>
-                <th className='text-nowrap'>PRICE CHANGE</th>
+                <th className="text-nowrap">PRICE CHANGE</th>
                 <th> MKT CAP</th>
               </tr>
             </thead>
             {filteredCoins.map((coin) => {
               return (
-                
-                  <Coin
-                    key={coin.id}
-                    name={coin.name}
-                    price={coin.current_price}
-                    symbol={coin.symbol}
-                    marketcap={coin.total_volume}
-                    volume={coin.market_cap}
-                    image={coin.image}
-                    priceChange={coin.price_change_percentage_24h}
-                  />
-                
+                <Coin
+                  key={coin.id}
+                  name={coin.name}
+                  price={coin.current_price}
+                  symbol={coin.symbol}
+                  marketcap={coin.total_volume}
+                  volume={coin.market_cap}
+                  image={coin.image}
+                  priceChange={coin.price_change_percentage_24h}
+                />
               );
             })}
           </Table>

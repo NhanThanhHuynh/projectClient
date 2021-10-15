@@ -53,8 +53,12 @@ const AddpostModal = () => {
   return (
     <>
     <Modal show={showAddPostModal} onHide={closeDialog}>
-      <Modal.Header closeButton>
+      <Modal.Header >
         <Modal.Title>What do you want to learn ?</Modal.Title>
+        <Button className='btn btn-light'
+        onClick={closeDialog}
+        >
+          <i className="fa fa-window-close"></i></Button>
       </Modal.Header>
       <Form onSubmit={onSubmit}>
         <Modal.Body>
