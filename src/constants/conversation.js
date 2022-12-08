@@ -1,6 +1,6 @@
-const host = 'https://safe-lake-14293.herokuapp.com/'
+const host = 'https://vercel-92cs2tx60-nhanthanhhuynh.vercel.app/'
 
 
-module.exports={
+module.exports = {
     host
 }
