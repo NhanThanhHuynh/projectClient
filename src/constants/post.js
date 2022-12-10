@@ -5,4 +5,4 @@ export const ADD_POST = "ADD_POST";
 export const DELETE_POST = "DELETE_POST";
 export const UPDATE_POST = "UPDATE_POST";
 export const FIND_POST = "FIND_POST";
-export const api_URL = 'https://vercel-92cs2tx60-nhanthanhhuynh.vercel.app/api'
+export const api_URL = 'http://localhost:7878/api'

@@ -1,4 +1,4 @@
-const host = 'https://vercel-92cs2tx60-nhanthanhhuynh.vercel.app/'
+const host = 'localhost:7878'
 
 
 module.exports = {
